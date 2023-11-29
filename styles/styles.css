@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+.backgroundSound{
+    display: none;
+}
+
+.root{
+    width: 100vw;
+    height: 100vh;
+}
+
+.backgroundImage{
+    width: 100vw;
+    height: 100vh;
+}
+
+.moon{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    animation: moon 30s linear infinite;
+}
+
+@keyframes moon {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.asteroid{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#asteroid1{
+    animation: asteroid1 4s linear infinite 5s;
+}
+@keyframes asteroid1 {
+    0%{
+        top: calc(100% + 60px);
+        left: 50%;
+    }
+    100%{
+        top: 50%;
+        left: calc(100% + 60px);
+    }
+}
+
+#asteroid2{
+    animation: asteroid2 5s linear infinite 15s;
+}
+@keyframes asteroid2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    100%{
+        top: calc(100% + 60px);
+        left: 75%;
+    }
+}
+
+#asteroid3{
+    width: 100px;
+    height: 100px;
+    animation: asteroid3 5s linear infinite 2s;
+}
+@keyframes asteroid3 {
+    0%{
+        top: -60px;
+        left: 50%;
+        rotate: 0deg;
+    }
+    100%{
+        top: calc(100% + 60px);
+        left: 10%;
+        rotate: 360deg;
+    }
+}
